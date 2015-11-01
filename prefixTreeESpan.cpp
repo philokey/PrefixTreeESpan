@@ -180,14 +180,10 @@ int main(int argc, char **argv) {
     }
     cout<<inputFile<<" "<<outputFile<<" "<<minSup<<endl;
     st1 = st2 = 0;
-//    inputFile = "/Users/philokey/ClionProjects/PrefixTreeESpan/test.in";
-//    outputFile = "/Users/philokey/ClionProjects/PrefixTreeESpan/test.out";
-//    minSup = 2;
     vector<Tree> trees;
     read(inputFile, trees);
-    cout<<trees.size()<<endl;
     const char* name = outputFile.c_str();
-    remove(name);
+    remove(name); //remove the existing output file
     prefixTreeESpan(trees, outputFile, minSup);
     return 0;
 }
