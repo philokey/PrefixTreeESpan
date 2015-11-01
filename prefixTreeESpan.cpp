@@ -29,7 +29,6 @@ void getFreElement(list<int> subTree, const int &minSup, const vector<ProjectedD
             }
         }
     }
-    //cout<<elemCnt.size()<<endl;
     vector<Element> freElem;
     for (auto e : elemCnt) {
         if (e.second.size() >= minSup) {
@@ -44,7 +43,6 @@ void getFreElement(list<int> subTree, const int &minSup, const vector<ProjectedD
     vector<ProjectedDB> newProjDB;
     resultNum += freElem.size();
     for (auto e : freElem) {
-        //auto t2 = clock();
         newProjDB.clear();
         newSubTree = subTree;
         auto treePos = newSubTree.end();
